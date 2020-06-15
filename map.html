@@ -113,6 +113,10 @@ function pushY()
 function refresh()
 {
     history.go();
+    //("map").load(window.location.href + "map");
+    //location.href = location.href;
+    //markInfo=null;
+
 }
 
 function focus(x,y)
@@ -145,7 +149,10 @@ function focus(x,y)
             latlng : new kakao.maps.LatLng(f,s)
             } )
     }
-
+    function delmarker()
+    {
+        marker.setMap(null);
+    }
 
  
     //마커찍기 정의
